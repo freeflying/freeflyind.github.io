@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="无论是个人、团队或是公司，想要高效工作都需要一套好用的内部自用办公管理系统，比如多个同事间经常要交换文档，每次用 QQ、微信、或是将文件传到外网网盘上共享都有着种种不便。 然而一些在线办公套件如微软 Office 365企业版比较贵，Google 企业应用套件又得番·羽·土·啬。那么，个人/小团队/公司有没有更低成本甚至是免费的解决方案呢？DzzOffice 是一套免费开源的在线办公套件，它能帮">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DzzOffice - 开源的免费网盘&#x2F;文档&#x2F;相册&#x2F;团队协作等在线办公系统应用">
+<meta property="og:url" content="http://yoursite.com/2018/04/23/DzzOffice/index.html">
+<meta property="og:site_name" content="自由的风">
+<meta property="og:description" content="无论是个人、团队或是公司，想要高效工作都需要一套好用的内部自用办公管理系统，比如多个同事间经常要交换文档，每次用 QQ、微信、或是将文件传到外网网盘上共享都有着种种不便。 然而一些在线办公套件如微软 Office 365企业版比较贵，Google 企业应用套件又得番·羽·土·啬。那么，个人/小团队/公司有没有更低成本甚至是免费的解决方案呢？DzzOffice 是一套免费开源的在线办公套件，它能帮">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/dzzoffice_banner.png">
+<meta property="og:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/dzzoffice.png">
+<meta property="og:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/apps.png">
+<meta property="og:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/wangpan.png">
+<meta property="og:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/ppt.png">
+<meta property="og:updated_time" content="2018-04-23T06:54:40.937Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DzzOffice - 开源的免费网盘&#x2F;文档&#x2F;相册&#x2F;团队协作等在线办公系统应用">
+<meta name="twitter:description" content="无论是个人、团队或是公司，想要高效工作都需要一套好用的内部自用办公管理系统，比如多个同事间经常要交换文档，每次用 QQ、微信、或是将文件传到外网网盘上共享都有着种种不便。 然而一些在线办公套件如微软 Office 365企业版比较贵，Google 企业应用套件又得番·羽·土·啬。那么，个人/小团队/公司有没有更低成本甚至是免费的解决方案呢？DzzOffice 是一套免费开源的在线办公套件，它能帮">
+<meta name="twitter:image" content="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/dzzoffice_banner.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/23/DzzOffice/"/>
+
+
+
+
+
+  <title>DzzOffice - 开源的免费网盘/文档/相册/团队协作等在线办公系统应用 | 自由的风</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自由的风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/DzzOffice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jiacao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自由的风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">DzzOffice - 开源的免费网盘/文档/相册/团队协作等在线办公系统应用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T14:54:11+08:00">
+                2018-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/dzzoffice_banner.png" alt="DzzOffice - 开源的免费网盘/文档/相册/团队协作等在线办公系统应用"></p>
+<p>无论是个人、团队或是<a href="https://www.iplaysoft.com/tag/%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">公司</a>，想要高效工作都需要一套好用的<strong>内部自用办公管理系统</strong>，比如多个同事间经常要交换文档，每次用 <a href="https://www.iplaysoft.com/qq.html" target="_blank" rel="noopener">QQ</a>、<a href="https://www.iplaysoft.com/weixin.html" target="_blank" rel="noopener">微信</a>、或是将文件传到外网网盘上共享都有着种种不便。</p>
+<p>然而一些在线办公套件如<a href="https://www.iplaysoft.com/go/office365" target="_blank" rel="noopener">微软 Office 365</a>企业版比较贵，<a href="https://www.iplaysoft.com/tag/google" target="_blank" rel="noopener">Google</a> 企业应用套件又得<a href="https://www.iplaysoft.com/go/fq" target="_blank" rel="noopener">番·羽·土·啬</a>。那么，个人/小团队/公司有没有更低成本甚至是免费的解决方案呢？<strong>DzzOffice</strong> 是一套<strong>免费开源的在线办公套件</strong>，它能帮你和团队快速搭建一套功能丰富且专属私有的「内部在线协同<a href="https://www.iplaysoft.com/tag/%E5%8A%9E%E5%85%AC" target="_blank" rel="noopener">办公</a>平台」……</p>
+<h3 id="自己架设一套功能丰富的在线办公软件"><a href="#自己架设一套功能丰富的在线办公软件" class="headerlink" title="自己架设一套功能丰富的在线办公软件"></a>自己架设一套功能丰富的在线办公软件</h3><p>Dzzoffice <a href="https://www.iplaysoft.com/tag/%E5%BC%80%E6%BA%90" target="_blank" rel="noopener">开源</a>办公套件类似于企业版的微软 <a href="https://www.iplaysoft.com/go/office365" target="_blank" rel="noopener">Office365</a>，它提供了多种在线的网页版应用供你选择，比如<a href="https://www.iplaysoft.com/tag/%E7%BD%91%E7%9B%98" target="_blank" rel="noopener">网盘</a>、在线 Office 文档 (Word、Excel 表格、演示文稿 PPT)、<strong>企业通讯录</strong>、<a href="https://www.iplaysoft.com/tag/%E7%9B%B8%E5%86%8C" target="_blank" rel="noopener">相册</a> (图片管理)、文章系统、任务管理、讨论板(内部论坛)、表单问卷、记事记录本等，可以满足绝大多数团队、公司的日常办公和<a href="https://www.iplaysoft.com/tag/%E5%8D%8F%E4%BD%9C" target="_blank" rel="noopener">协作</a>的需求。</p>
+<p><img src="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/dzzoffice.png" alt="Dzzoffice 在线办公软件"></p>
+<p>当然，尽管 DzzOffice (<strong>大桌子</strong>) 比较偏向于企业使用，但你自己也可以用它来搭建一个「<strong>个人自用的网盘</strong>」、私人文档库、自建个人在线相册等用途。即便个人使用，其应用场景也非常广泛……</p>
+<p><img src="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/apps.png" alt="DzzOffice 在线办公"></p>
+<p>软件运行于 PHP+MySQL 环境，普适性很强，Win、<a href="https://www.iplaysoft.com/os/linux-platform" target="_blank" rel="noopener">Linux</a> 或 <a href="https://www.iplaysoft.com/os/mac-platform" target="_blank" rel="noopener">macOS</a> 都可以跑起来。能跑个 <a href="https://www.iplaysoft.com/wordpress.html" target="_blank" rel="noopener">WordPress</a> 或任何 PHP 程序的机器都基本都能使用。你可以轻松架设在互联网上的任何 <a href="https://www.iplaysoft.com/go/vps" target="_blank" rel="noopener">VPS 云服务</a>、虚拟主机、独立<a href="https://www.iplaysoft.com/tag/%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">服务器</a>，也能搭建在内网 (<a href="https://www.iplaysoft.com/tag/%E5%B1%80%E5%9F%9F%E7%BD%91" target="_blank" rel="noopener">局域网</a>) 里的普通 PC、甚至是<a href="https://www.iplaysoft.com/go/raspberrypi" target="_blank" rel="noopener">树莓派</a>上运行。</p>
+<p><img src="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/wangpan.png" alt="网盘">自建网盘 (文件管理)</p>
+<p>在安装 <a href="https://www.iplaysoft.com/dzzoffice.html" target="_blank" rel="noopener">Dzzoffice</a> 成功之后，你可以后台→应用市场里面下载需要的应用组件，这些应用很丰富，都是「可选」安装的，根据需求选择即可。</p>
+<p><img src="https://img.iplaysoft.com/wp-content/uploads/2018/dzzoffice/ppt.png" alt="在线 Office 办公">在线 Office 文档查看与编辑</p>
+<p>而且 Dzzoffice 里还集成了大量其他开源工具，如网盘要用到的在线压缩、解压，各类媒体文件预览，各类文档预览与编辑等，可以说是各类开源程序的综合利用。你可以去看看演示站：</p>
+<p><a href="http://demo.dzzoffice.com/" target="_blank" rel="noopener">DzzOffice 在线演示</a></p>
+<h3 id="Dzzoffice-的功能："><a href="#Dzzoffice-的功能：" class="headerlink" title="Dzzoffice 的功能："></a>Dzzoffice 的功能：</h3><p>Dzzoffice 套件提供的应用功能很丰富，包括但不限于以下的这些：</p>
+<ul>
+<li><strong>网盘</strong>: 企业、团队文件集中管理。主要体现的功能是支持企业部门的组织架构建立<a href="https://www.iplaysoft.com/tag/%E5%85%B1%E4%BA%AB" target="_blank" rel="noopener">共享</a>目录，也支持组的方式灵活建立共享目录。支持文件标签，多版本，评论，详细的目录权限等协作功能。</li>
+<li><strong>文档</strong>: 在线 Word <a href="https://www.iplaysoft.com/tag/%E6%96%87%E6%A1%A3" target="_blank" rel="noopener">文档</a>协作工具。前端做了一套模板管理，用于企业添加自己的常用文档模板，如空白合同。后端支持 office online server，onlyoffice，collaboraoffice 来实现文档预览与协同<a href="https://www.iplaysoft.com/tag/%E7%BC%96%E8%BE%91" target="_blank" rel="noopener">编辑</a>。</li>
+<li><strong>表格</strong>: 在线 Excel 协作工具。同上</li>
+<li><strong>演示文稿</strong>: 在线 PPT 文档浏览、编辑工具。同上</li>
+<li><strong>记录</strong>: 多人参与协作的记录本，主要体现协作记录内容。</li>
+<li><strong>新闻</strong>: 文章系统，可用于企业新闻，通知等用途</li>
+<li><strong>通讯录</strong>: 企业人员联系方式查询</li>
+<li><strong>文集</strong>: 通过树形目录有序管理文档。支持 <a href="https://www.iplaysoft.com/tag/markdown" target="_blank" rel="noopener">Markdown</a> 编辑，支持导入导出 txt，epub、mobi、azw3</li>
+<li><strong>相册</strong>： 企业，团队<a href="https://www.iplaysoft.com/tag/%E5%9B%BE%E7%89%87" target="_blank" rel="noopener">图片</a>管理</li>
+<li><strong>任务板:</strong> 任务管理、团队协作</li>
+<li><strong>讨论板</strong>: 内部论坛设置</li>
+<li><strong>表单</strong>: 表单，问卷工具</li>
+</ul>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p><strong>DzzOffice</strong> 免费且功能丰富，大部分功能以办公和协作为主，适合团队/公司自行搭建内部<strong>办公系统</strong>来使用。由于其代码开源，而且 <a href="https://www.iplaysoft.com/tag/php" target="_blank" rel="noopener">PHP</a>+MySQL 也非常简单成熟，数据全部保存在自己服务器里，日后的维护和长期使用基本没有太多风险。</p>
+<p>如果你或者团队、公司正需要一套属于自己专属的内部网盘、文档、相册、通讯录，方便大家交流与共享文件，省去老要 QQ 传文档的麻烦，Dzzoffice 值得你尝试！唯一比较可惜的是，目前 DzzOffice 还没有 Windows 或 <a href="https://www.iplaysoft.com/os/ios-platform" target="_blank" rel="noopener">iOS</a>、<a href="https://www.iplaysoft.com/os/android-platform" target="_blank" rel="noopener">Android</a> 的客户端，仅能作为网页版使用</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/23/PowerKeys/" rel="next" title="PowerKeys快捷键">
+                <i class="fa fa-chevron-left"></i> PowerKeys快捷键
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jiacao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自己架设一套功能丰富的在线办公软件"><span class="nav-number">1.</span> <span class="nav-text">自己架设一套功能丰富的在线办公软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dzzoffice-的功能："><span class="nav-number">2.</span> <span class="nav-text">Dzzoffice 的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">3.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiacao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
